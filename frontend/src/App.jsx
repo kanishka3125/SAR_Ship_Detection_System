@@ -295,8 +295,7 @@ const handleRun = async () => {
               pointerEvents: viewMode === '3d' ? 'auto' : 'none'
             }}
           >
-            {false && (
-              <Globe3D 
+            <Globe3D 
               ships={processedShips} 
               alerts={mergedAlerts}
               clusters={clusters}
@@ -305,8 +304,7 @@ const handleRun = async () => {
               viewState={viewState}
               onViewChange={(coords) => handleViewTransition('2d', coords)}
               visible={viewMode === '3d'}
-              />
-              )}
+            />
           </div>
 
           {/* ── Alerts Panel (overlay, slides in from right) ── */}
