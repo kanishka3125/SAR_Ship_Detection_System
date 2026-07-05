@@ -77,6 +77,7 @@ except ImportError:
 
 # ── YOLO (detection mode only — graceful skip if absent) ─────────────────────
 try:
+    # pyrefly: ignore [missing-import]
     from ultralytics import YOLO
     HAS_YOLO = True
 except ImportError:
@@ -138,7 +139,7 @@ class Config:
     HEADING_DIVERGE_DEG: float = float(os.getenv("HEADING_DIVERGE_DEG", "45.0"))
 
     # YOLO
-    YOLO_WEIGHTS : str   = os.getenv("YOLO_WEIGHTS", "C:/Users/Rik/Downloads/last.pt")
+    YOLO_WEIGHTS : str = os.getenv("YOLO_WEIGHTS", "last.pt")
     YOLO_CONF    : float = float(os.getenv("YOLO_CONF", "0.2"))
     YOLO_IOU     : float = float(os.getenv("YOLO_IOU",  "0.5"))
 
